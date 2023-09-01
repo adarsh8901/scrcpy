@@ -1,0 +1,128 @@
+#include<stdio.h>
+main()
+{
+   int ch;
+   printf("Welcome to my calculator");
+   printf("\n 1.add");
+   printf("\n 2.sub");
+   printf("\n 3.mul");
+   printf("\n 4.div");
+   printf("\n 5.per");
+   printf("\n 6.per and cgpa");
+   printf("\n 7.cgpa");
+   printf("\n 8.percentage through cgpa");
+   printf("\n Enter your choice:-");
+   scanf("%d",&ch);
+
+   switch(ch)
+   {
+      case 1:{
+	       int i,j,res=0;
+	       printf("Enter a first number:-");
+	       scanf("%d",&i);
+	       printf("Enter second number:-");
+	       scanf("%d",&j);
+	       res=i+j;
+	       printf("%d",res);
+	   }
+	 break;
+	 case 2:{
+		  int i,j,res=0;
+		  printf("Enter a first number :-");
+		  scanf("%d",&i);
+		  printf("Enter second number:-");
+		  scanf("%d",&j);
+		  res=i-j;
+		  printf("%d",res);
+		}
+	    break;
+     case 3:{
+	       int i,j,res=0;
+	       printf("Enter a first number :-");
+	       scanf("%d",&i);
+	       printf("Enter second number:-");
+	       scanf("%d",&j);
+	       res=i*j;
+	       printf("%d",res);
+	   }
+	    break;
+     case 4:{
+	       int i,j,res=0;
+	       printf("Enter a first number :-");
+	       scanf("%d",&i);
+	       printf("Enter second number:-");
+	       scanf("%d",&j);
+	       res=i/j;
+	       printf("%d",res);
+
+	    }
+	    break;
+
+     case 5:{
+	       float a,b,c,d,e,agg,per,fm;
+
+	       printf("Sub 1:-");
+	       scanf("%f",&a);
+	       printf("Sub 2:-");
+	       scanf("%f",&b);
+	       printf("Sub 3:-");
+	       scanf("%f",&c);
+	       printf("Sub 4:-");
+	       scanf("%f",&d);
+	       printf("Sub 5:-");
+	       scanf("%f",&e);
+	       agg=a+b+c+d+e;
+	       printf("Aggregate is=%f",agg);
+	       printf("\nfull marks:-");
+	       scanf("%f",&fm);
+	       per=(agg/fm)*100;
+	       printf("\nPercentage is=%f",per);
+	     }
+		break;
+		 case 6:{
+ 	              float a,b,c,d,e,agg,per,fm,cgpa;
+
+	              printf("Sub 1:-");
+	              scanf("%f",&a);
+	              printf("Sub 2:-");
+	              scanf("%f",&b);
+                  printf("Sub 3:-");
+                  scanf("%f",&c);
+                  printf("Sub 4:-");
+                  scanf("%f",&d);
+	              printf("Sub 5:-");
+	              scanf("%f",&e);
+                  agg=a+b+c+d+e;
+	              printf("Aggregate is=%f",agg);
+	              printf("\nfull marks:-");
+	              scanf("%f",&fm);
+                  per=(agg/fm)*100;
+                  printf("\nPercentage is=%f",per);
+		          cgpa=(per/9.5);
+		          printf("\n cgpa of %f percent is %f cgpa",per,cgpa);
+
+		 }
+          break;
+
+          case 7:{
+                    float per,cgpa;
+                    printf("Enter youre percentage :- ");
+                    scanf("%f",&per);
+                    cgpa=(per/9.5);
+                    printf("youre cgpa is=%f cgpa",cgpa);
+                 }
+           break;
+
+           case 8:{
+                    float per,cgpa;
+                    printf("Enter youreb cgpa:-");
+                    scanf("%f",&cgpa);
+                    per=(cgpa*9.5);
+                    printf("youre percentage is=%f",per);
+                  }
+         break;
+          default:
+            printf("Inavalid command");
+
+      }return 0;
+}
